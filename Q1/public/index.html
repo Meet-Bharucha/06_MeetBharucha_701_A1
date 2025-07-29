@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Question-1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    #result {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AJAX Call to NodeJS</h1>
+  <button onclick="callHello()">Call /gethello</button>
+  <div id="result"></div>
+
+  <script>
+    function callHello() {
+      fetch('/gethello')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('result').innerText = data;
+        })
+        .catch(err => {
+          console.error('Error:', err);
+        });
+    }
+  </script>
+
+</body>
+</html>

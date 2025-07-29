@@ -8,10 +8,10 @@ async function fetchGoogleHomePage() {
       }
   
       const body = await response.text();  // Get response as plain HTML
-      console.log('✅ Google homepage fetched successfully!');
+      console.log('Google homepage fetched successfully!');
       console.log(body.substring(0, 500)); // Print first 500 characters of the page
     } catch (err) {
-      console.error('❌ Error fetching Google:', err.message);
+      console.error(' Error fetching Google:', err.message);
     }
   }
   
